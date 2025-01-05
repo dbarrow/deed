@@ -1,0 +1,58 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body, html {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+/* Map Label Styles */
+.map-label {
+  position: absolute;
+  pointer-events: none;
+  z-index: 1000;
+  transform-origin: center center;
+}
+
+.map-label-content {
+  position: absolute;
+  white-space: nowrap;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.label-background {
+  background-color: white;
+  padding: 2px 6px;
+  border-radius: 4px;
+  font-size: 12px;
+  line-height: 1.2;
+  color: #374151;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(0, 0, 0, 0.1);
+  display: inline-block;
+}
+
+/* Layer Control Styles */
+.layer-control {
+  position: absolute;
+  top: 12px; /* Match zoom control position */
+  right: 10px;
+  z-index: 1000;
+  background-color: white;
+  border-radius: 4px;
+  box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+  transition: opacity 0.2s ease-in-out;
+}
+
+.layer-control.hidden {
+  display: none;
+}
